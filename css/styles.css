@@ -1,6 +1,7 @@
 /* ==========================
    1. RESET
    ========================== */
+
 *,
 *::before,
 *::after {
@@ -18,6 +19,7 @@ img {
    2. DESIGN TOKENS
 
    ========================== */
+
 :root {
     /* Color */
     --color-bg: #fafafa;
@@ -48,6 +50,29 @@ img {
    3. BASE ELEMENT STYLES
    ========================== */
 
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+
+
+h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
+h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
+h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+
+h1, h2, h3 { margin-bottom: var(--space-sm); }
+p { margin-bottom: var(--space-md); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--color-accent); }
+}
 /* ==========================
    4. LAYOUT
    ========================== */
+
+body {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+}
