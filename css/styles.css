@@ -21,6 +21,10 @@ img {
    ========================== */
 
 :root {
+    /*...existing tokens...*/
+    --font-stack:system-ui, 'Segoe UI', Tahoma, sans-serif;
+    --color-surface-alt: #f1f5f9;
+    --radius-md: 8px;
     /* Color */
     --color-bg: #fafafa;
     --color-surface: #ffffff;
@@ -66,6 +70,9 @@ p { margin-bottom: var(--space-md); }
 p:last-child { margin-bottom: 0; }
 
 a { color: var(--color-accent); }
+
+font-family: var(--font-stack)
+/*...existing lab 05 decleration...*/
 }
 /* ==========================
    4. LAYOUT
@@ -76,3 +83,35 @@ body {
     margin: 0 auto;
     padding: var(--space-lg) var(--space-md);
 }
+
+header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background-color: var(--color-surface-alt);
+    margin-bottom: var(--space-lg);
+}
+.header-text { flex: 1; }
+.header-pic {
+    flex: 1;
+    background-color: var(--color-surface);
+    min-height: 18rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+}
+
+nav {
+    padding: var(--space-md) 0;
+}
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-right: var(--space-lg);
+}
+nav a:hover { color: var(--color-accent); }
+
+section { margin-bottom: var(--space-xl); }
